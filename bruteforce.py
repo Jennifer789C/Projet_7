@@ -23,10 +23,10 @@ for i in nombre_actions:
         total_profit = 0
         liste_actions = []
         for action in portefeuille:
-            total_cout += float(action["Coût"])
-            profit = float(action["Coût"]) * float(action["Bénéfice"]) / 100
+            total_cout += float(action["price"])
+            profit = float(action["price"]) * float(action["benefice"]) / 100
             total_profit += profit
-            liste_actions.append(action["Actions"])
+            liste_actions.append(action["name"])
         if total_cout <= COUT_MAX:
             benefice_portefeuille = total_profit / total_cout * 100
             if total_profit > meilleur_investissement["Profit"]:
